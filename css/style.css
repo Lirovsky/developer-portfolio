@@ -1,0 +1,356 @@
+
+/* geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+html {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+.max-width {
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+/* header */
+header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.header-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-top p {
+    font-family: 'Playfair Display', serif;
+    font-weight: 300;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+.header-top ul {
+    display: flex;
+    gap: 20px;
+}
+.header-top ul li {
+    padding: 5px 10px;
+}
+.header-top ul li a{ 
+    font-size: 16px;
+    font-weight: 300;
+    color: #bcbbbb;
+    display: block;
+}
+.btn {
+    display: flex;
+    align-items: center;
+    background-color: #fbe850;
+    color: #000;
+    padding: 15px 30px;
+    border-radius: 2px;
+    transition: all .5s;
+}
+.btn:hover {
+    transform: scale(1.1);
+}
+#btnMobile{ 
+    display: none;
+}
+
+/* Responsivo Menu */
+@media (max-width: 900px) {
+    .header-top p {
+        font-size: 20px;
+    }
+    .header-top #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 0px;
+        top: 100px;
+        right: 0;
+        transition: .5s;
+        background-color: rgba(0,0,0,0.9);
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    .header-top #navLinks.active #menu {
+        height: auto;
+        visibility: visible;
+    }
+    .header-top #menu a {
+        font-size: 20px;
+        padding: 1rem 0;
+        margin: 0 2rem;
+        border-bottom: 1px solid white;
+    }
+    .header-top #btnMobile {
+        display: flex;
+        padding: 1rem 1rem;
+        cursor: pointer;
+    }
+    .header-top .btn {
+        display: none;
+    }
+}
+
+/* seção 1 */
+.section-1 {
+    margin-top: 5rem;
+}
+.section-1 .banner h1 {
+    max-width: 70%;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 50px;
+    margin-bottom: .5rem;
+    float: left;
+}
+.section-1 .banner p {
+    max-width: 55%;
+    margin: 1rem 0 3rem 0;
+    color: #bcbbbb;
+    font-size: 16px;
+    font-weight: 300;
+    clear: both;
+}
+
+@media (max-width: 900px) {
+    .section-1 {
+        margin-top: 3rem;
+    }
+    .section-1 .banner h1 {
+        max-width: 100%;
+        font-size: 55px;
+    }
+    .section-1 .banner p {
+        max-width: 90%;
+        font-size: 20px;
+    }
+}
+@media (max-width: 600px) {
+    .section-1 {
+        margin-top: 2rem;
+    }
+    .section-1 .banner h1 {
+        font-size: 47px;
+    }
+    .section-1 .banner p {
+        max-width: 90%;
+        font-size: 20px;
+    }
+}
+@media (max-width: 480px) {
+    .section-1 {
+        margin-top: 1rem;
+    }
+    .section-1 .banner h1 {
+        font-size: 35px;
+    }
+    .section-1 .banner p {
+        font-size: 18px;
+    }
+}
+@media (max-width: 320px) {
+    .section-1 .banner h1 {
+        font-size: 28px;
+    }
+    .section-1 .banner p {
+        max-width: 100%;
+        font-size: 15px;
+    }
+}
+
+/* section 2 */
+.section-2 {
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.section-2 .imagem-logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.section-2 .imagem-logo img {
+    width: 100px;
+}
+
+@media (max-width: 950px) {
+    .section-2 .imagem-logo {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 700px) {
+    .section-2 .imagem-logo {
+        margin-top: 2rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 430px) {
+    .section-2 .imagem-logo {
+        margin-top: 2rem;
+    }
+    .section-2 .imagem-logo img {
+        width: 80px;
+    }
+}
+
+/* section 3 */
+.section-3 {
+    margin: 3.5rem 0;
+}
+.section-3 .projetos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+.section-3 .projetos img{
+    width: 100%;
+    transition: all .5s;
+}
+.section-3 .projetos img:hover{
+    width: 100%;
+    transform: translateY(-10px);
+}
+.section-3 .projetos h2{
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 300;
+    margin: .5rem 0;
+}
+.section-3 .projetos h2 span{
+    font-size: 20px;
+    margin-left: 10px;
+}
+.section-3 .projetos p{
+    font-size: 16px;
+    font-weight: 300;
+    color: #bcbbbb;
+}
+
+@media (max-width: 700px) {
+    .section-3 .projetos {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+}
+/* section 4 */
+.section-4 {
+    margin: 3.5rem 0;
+    padding: 2.5rem 0;
+    background-color: #2e3038;
+}
+.section-4 .sobre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+.section-4 .sobre h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+.section-4 .sobre p {
+    font-size: 15px;
+    font-weight: 300;
+    color: #bcbbbb;
+    margin-bottom: 1rem;
+}
+@media (max-width: 700px) {
+    .section-4 .sobre {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+/* section 5 */
+.section-5 {
+    margin: 3.5rem 0;
+}
+.section-5 .interesse h2 {
+    max-width: 80%;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 30px;
+    float: left;
+    margin-bottom: 1rem;
+}
+.section-5 .interesse p {
+    max-width: 50%;
+    font-size: 15px;
+    margin-bottom: 1rem;
+    color: #bcbbbb;
+    clear: both;
+}
+.section-5 .interesse .btn {
+    display: inline-block;
+    max-width: 50%;
+    font-size: 16px;
+}
+@media (max-width: 800px) {
+    .section-5 .interesse p {
+        max-width: 60%;
+
+    }
+}
+@media (max-width: 500px) {
+    .section-5 .interesse h2 {
+        max-width: 100%;
+    }
+    .section-5 .interesse p {
+        max-width: 90%;
+
+    }
+}
+@media (max-width: 350px) {
+    .section-5 .interesse .btn {
+        max-width: 50%;
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+/* footer */
+footer {
+    padding: 1rem 0;
+    background-color: #2e3038;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer p {
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.footer img {
+    width: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all .5s;
+}
+.footer img:hover {
+    transform: translateY(-5px);
+}
+@media (max-width: 350px) {
+    .footer p {
+        font-size: 15px;
+    }
+    .footer img {
+        width: 20px;
+        margin-right: 5px;
+    }
+}
